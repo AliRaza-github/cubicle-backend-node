@@ -13,6 +13,10 @@ app.use('/api/auth', authRoutes);
 const adminRoutes = require("./src/routes/adminRoute");
 app.use('/api/admin', adminRoutes);
 
+app.get ("/home",(req,res)=>{
+    res.send("home vercel")
+})
+
 
 mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log('MongoDB connected successfully'))
