@@ -25,10 +25,12 @@ mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log('MongoDB connected successfully'))
     .catch(err => console.error('MongoDB connection error:', err));
 
+
 // const port = process.env.PORT;
 // app.listen(port, () => {
 //     console.log(`Server running at http://localhost:${port}`);
 // });
+
 module.exports = app;
 module.exports.handler = serverless(app);
 
